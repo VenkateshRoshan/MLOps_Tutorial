@@ -1,0 +1,6 @@
+numpy
+opencv-python
+flask
+mlflow
+matplotlib
+pytest
