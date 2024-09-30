@@ -15,10 +15,10 @@ transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize((0.5,), (0.5,))
 ])
-
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 # model loading
 model = SimpleCNN()
-model.load_state_dict(torch.load('mnist_model.pth'))
+model.load_state_dict(torch.load('mnist_model.pth')).to(device)
 model.eval()
 
 @app.route('/')
