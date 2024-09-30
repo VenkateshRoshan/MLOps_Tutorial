@@ -1,5 +1,8 @@
 import mlflow
-from ..model import SimpleCNN
+import os
+import sys
+
+from model import SimpleCNN
 import torch
 
 # set uri

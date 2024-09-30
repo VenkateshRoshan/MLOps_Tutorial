@@ -1,9 +1,13 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
+import mlflow
 from mlflow import log_metric, log_param, log_artifact
 from mlflow import start_run
 import numpy as np
+
+# set uri
+mlflow.set_tracking_uri("http://127.0.0.1:5000")
 
 class SimpleCNN(nn.Module):
     def __init__(self):
